@@ -152,7 +152,6 @@ int replace_vars(info_t *info)
  *
  * Return: 1 if replaced, 0 otherwise
  */
-int replace_string(char **old, char *new)
 
 int replace_string(char **old, char *new)
 
