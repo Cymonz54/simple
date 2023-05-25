@@ -9,7 +9,7 @@
  * Return: Pointer to the destination string.
  */
 
-char *_strncpy(char *dest, const char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 
@@ -30,7 +30,7 @@ char *_strncpy(char *dest, const char *src, int n)
  * Return: Pointer to the destination string.
  */
 
-char *_strncat(char *dest, const char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	int dest_len = strlen(dest);
 	int i;
@@ -66,3 +66,4 @@ char *_strchr(char *s, char c)
 		return (s);
 
 	return (NULL);
+}

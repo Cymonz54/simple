@@ -123,13 +123,14 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
  * Return: The string containing the read line.
  */
 
-ssize_t _getline(info_t *info, char **ptr, size_t *length)
+int _getline(info_t *info, char **ptr, size_t *length)
 
 {
 	static char buf[READ_BUF_SIZE];
 	static size_t i, len;
 	ssize_t r = 0, s = 0;
 	char *p = NULL, *new_p = NULL, *c;
+	size_t k;
 
 	p = *ptr;
 	if (p && length)
@@ -142,7 +143,7 @@ ssize_t _getline(info_t *info, char **ptr, size_t *length)
 		return (-1);
 
 	c = _strchr(buf + i, '\n');
-	size_t k = c ? 1 + (size_t)(c - buf) : len;
+	k = c ? 1 + (size_t)(c - buf) : len;
 
 	new_p = _realloc(p, s, s ? s + k : k + 1);
 
