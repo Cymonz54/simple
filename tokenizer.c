@@ -11,7 +11,7 @@
  * or NULL on failure
  */
 
-char **strtow(char *str, char *d)
+char **strtow(char *str, char d)
 
 {
 	int i, j, k, m, num_words = 0;
@@ -65,7 +65,7 @@ char **strtow(char *str, char *d)
  * or NULL on failure
  */
 
-char **strtow2(char *str, char d)
+char **strtow2(char *str, char *d)
 
 {
 	int i, j, k, m, num_words = 0;

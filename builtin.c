@@ -1,14 +1,14 @@
 #include "shell.h"
 
 /**
- * my_exit -  Terminates the shell program.
+ * _myexit -  Terminates the shell program.
  * @info: Pointer to the structure containing potential arguments.
  *
  * Return: Terminates shell with specified exit status
  * (0) if info->argv[0] != "exit".
  */
 
-int my_exit(info_t *info)
+int _myexit(info_t *info)
 
 {
 	int exit_status;
@@ -86,13 +86,13 @@ int _mycd(info_t *info)
 }
 
 /**
- * my_help - Provide help information for the shell.
+ * _myhelp - Provide help information for the shell.
  * @info: Pointer to the structure containing potential arguments.
  *
  * Return: Always returns 0.
  */
 
-int my_help(info_t *info)
+int _myhelp(info_t *info)
 
 {
 	char **arg_array;
