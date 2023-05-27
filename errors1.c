@@ -23,13 +23,13 @@ int _erratoi(char *s)
 		result *= 10;
 		result += (s[i] - '0');
 		if (result > INT_MAX)
-			return -1;
+			return (-1);
 	}
 		else
-			return -1;
+			return (-1);
 	}
-	
-	return (int)result;
+
+	return ((int)result);
 }
 
 /**
@@ -92,7 +92,8 @@ int print_d(int input, int fd)
 }
 
 /**
- * convert_number - Converts a number to a string representation in the specified base.
+ * convert_number - Converts a number to a string
+ * representation in the specified base.
  * @num: The number to convert.
  * @base: The base to use for conversion.
  * @flags: Additional flags for formatting.
@@ -129,7 +130,8 @@ char *convert_number(long int num, int base, int flags)
 }
 
 /**
- * remove_comments - Replaces the first instance of '#' in the string with '\0'.
+ * remove_comments - Replaces the first
+ * instance of '#' in the string with '\0'.
  * @buf: The address of the string to modify.
  *
  * Return: Always 0.
