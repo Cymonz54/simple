@@ -1,24 +1,24 @@
 #include "shell.h"
 
 /**
- * is_interactive - checks if the shell is in interactive mode
+ * interactive - checks if the shell is in interactive mode
  * @info: struct address
  *
  * Return: 1 if in interactive mode, 0 otherwise
  */
-int is_interactive(info_t *info)
+int interactive(info_t *info)
 {
 	return (isatty(STDIN_FILENO) && info->readfd <= 2);
 }
 
 /**
- * is_delimiter - checks if a character is a delimiter
+ * is_delim - checks if a character is a delimiter
  * @c: the character to check
  * @delim: the delimiter string
  *
  * Return: 1 if the character is a delimiter, 0 otherwise
  */
-int is_delimiter(char c, char *delim)
+int is_delim(char c, char *delim)
 {
 	while (*delim)
 	{
@@ -30,12 +30,12 @@ int is_delimiter(char c, char *delim)
 }
 
 /**
- * is_alpha - checks if a character is alphabetic
+ * _isalpha - checks if a character is alphabetic
  * @c: the character to check
  *
  * Return: 1 if the character is alphabetic, 0 otherwise
  */
-int is_alpha(int c)
+int _isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
