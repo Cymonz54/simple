@@ -2,31 +2,34 @@
 
 /**
  * _strlen - Returns the length of a string.
- * @s: The string whose length to check.
+ * @s: The string to calculate the length of
  *
- * Return: Integer length of string.
+ * Return: The length of string as an integer
  */
 int _strlen(char *s)
 {
-	int i = 0;
+	int a = 0;
 
 	if (!s)
 		return (0);
 
 	while (*s++)
-		i++;
+		a++;
 
-	return (i);
+	return (a);
 }
 
 /**
- * _strcmp - Performs lexicographic comparison of two strings.
- * @s1: The first string.
- * @s2: The second string.
+ * _strcmp - Compare two string lexiographicallly
+ * @s1: The first string to compare
+ * @s2: The second string to compare
  *
- * Return: Negative if s1 < s2, positive if s1 > s2, zero if s1 == s2.
+ * Return: An integer less than, equal to, or greater than zero if s1
+ * is lexicographically less than, equal to or grEATER than s2.
  */
+
 int _strcmp(char *s1, char *s2)
+
 {
 	while (*s1 && *s2)
 	{
@@ -43,13 +46,16 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * starts_with - Checks if needle starts with haystack.
- * @haystack: String to search.
- * @needle: The substring to find.
+ * starts_with - Checks if a string starts with a specific substring
+ * @haystack: The String to search for.
+ * @needle: The substring to be found.
  *
- * Return: Address of next char of haystack or NULL.
+ * Return: Address of the next char of haystack if needle stars with 
+ * haystack, or NULL if not found.
  */
+
 char *starts_with(const char *haystack, const char *needle)
+
 {
 	while (*needle)
 	{
@@ -65,7 +71,7 @@ char *starts_with(const char *haystack, const char *needle)
  * @dest: The destination buffer.
  * @src: The source buffer.
  *
- * Return: Pointer to destination buffer.
+ * Return: Pointer to the destination buffer.
  */
 char *_strcat(char *dest, char *src)
 {
